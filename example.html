@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  	</head>
+  <body>
+
+    <h2>HTML Forms</h2>
+
+    <form action="checkout.html" name="first-form" class="form123" data-f="Infinity">
+      First name:<br>
+      <input type="text" name="firstname" value="Mickey" data-f="1" id="e">
+      <br>
+      Last name:<br>
+      <input type="text" name="lastname" value="Mouse">
+      <br><br>
+      <input type="submit" value="Submit">
+    </form> 
+
+    <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+  </body>
+  <script type="text/javascript" defer>
+  		// Create the event.
+			var event = document.createEvent('Event');
+
+			// Define that the event name is 'build'.
+			event.initEvent('mouseenter', true, true);
+
+			// Listen for the event.
+			document.getElementsByClassName('form123')[0].addEventListener('mouseenter', function (e) {
+			  // e.target matches elem
+			  console.log(123)
+			}, false);
+
+			// target can be any Element or other EventTarget.
+			document.dispatchEvent(event);
+  	</script>
+</html>
